@@ -15,13 +15,15 @@
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
     >
-    <a-assets>
-      <a-asset-item
-        id="hat"
-        src="https://cdn.jsdelivr.net/gh/atomblack/ar-example/assets/a.glb"
-        "
-      ></a-asset-item>
       <a-assets>
+        <a-asset-item
+          id="robot"
+          src="https://cdn.jsdelivr.net/gh/AtomBlack/ar-example/assets/a.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="seesaw02-1"
+          src="/assets/seesaw02-1.glb"
+        ></a-asset-item>
         <a-asset-item
           id="glassesModel"
           src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/face-tracking/assets/glasses/scene.gltf"
@@ -48,7 +50,16 @@
           position="0 0 0"
           rotation="0 0 0"
           scale="1 1 1"
-          src="#a"
+          src="#robot"
+        ></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          animation-mixer
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.01 0.01 0.01"
+          src="#seesaw02-1"
         ></a-gltf-model>
       </a-entity>
       <a-entity mindar-face-target="anchorIndex: 168">
